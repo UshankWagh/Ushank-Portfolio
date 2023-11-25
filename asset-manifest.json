@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/ushank-portfolio/static/css/main.e65a8aa6.css",
+    "main.js": "/ushank-portfolio/static/js/main.b50f745b.js",
+    "static/media/future_tech_clone.png": "/ushank-portfolio/static/media/future_tech_clone.21ecab55696059604e41.png",
+    "static/media/drone_website.png": "/ushank-portfolio/static/media/drone_website.23d677270088b2fe3f61.png",
+    "static/media/resume.png": "/ushank-portfolio/static/media/resume.f8f3381e5b9636f1c10a.png",
+    "static/media/quik_buy.jpg": "/ushank-portfolio/static/media/quik_buy.0428d6ad6cc15f4809d8.jpg",
+    "static/media/profile.png": "/ushank-portfolio/static/media/profile.6295a608debc89761ab3.png",
+    "static/media/iit_bombay.jpg": "/ushank-portfolio/static/media/iit_bombay.0e16a2c55dbac5b3bae0.jpg",
+    "static/media/order-desk.png": "/ushank-portfolio/static/media/order-desk.8f3c0b65854231f8011a.png",
+    "static/media/promodor.png": "/ushank-portfolio/static/media/promodor.c42bc9bb30c6c4b9011e.png",
+    "static/media/sololearn.jpg": "/ushank-portfolio/static/media/sololearn.1796b1f250e7faad9c51.jpg",
+    "static/media/node.jpg": "/ushank-portfolio/static/media/node.5c37e07f205c9b9d169b.jpg",
+    "static/media/listening.jpg": "/ushank-portfolio/static/media/listening.4a4b1d5546024c89922d.jpg",
+    "static/media/todoapp.png": "/ushank-portfolio/static/media/todoapp.317c5d0df8d7a985284d.png",
+    "static/media/html.jpg": "/ushank-portfolio/static/media/html.0898ecd28252de44378c.jpg",
+    "static/media/js.jpg": "/ushank-portfolio/static/media/js.46fd00d4ff9307e1ea6c.jpg",
+    "static/media/express.jpg": "/ushank-portfolio/static/media/express.625c25d34cf93b229d92.jpg",
+    "static/media/css.jpg": "/ushank-portfolio/static/media/css.282443c4fed564f9fb34.jpg",
+    "static/media/c.jpg": "/ushank-portfolio/static/media/c.7faec44baa32e6214e65.jpg",
+    "static/media/python.jpg": "/ushank-portfolio/static/media/python.43345aa45a8f57d72a52.jpg",
+    "static/media/udemy.jpg": "/ushank-portfolio/static/media/udemy.a7854ab558a5c4730186.jpg",
+    "static/media/mongo.jpg": "/ushank-portfolio/static/media/mongo.690c416f7ecef1085c60.jpg",
+    "static/media/call.png": "/ushank-portfolio/static/media/call.72e01bc40b6c8b59abe8.png",
+    "index.html": "/ushank-portfolio/index.html",
+    "main.e65a8aa6.css.map": "/ushank-portfolio/static/css/main.e65a8aa6.css.map",
+    "main.b50f745b.js.map": "/ushank-portfolio/static/js/main.b50f745b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e65a8aa6.css",
+    "static/js/main.b50f745b.js"
+  ]
+}
