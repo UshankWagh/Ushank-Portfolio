@@ -245,6 +245,10 @@ header::before {
         height: 60vh;
     }
 
+    .resume img {
+        height: 100%;
+    }
+
     .resume .x {
         right: 6%;
     }

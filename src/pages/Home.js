@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "../styles/Home.css"
 import linkedin from "../images/linkedin.png";
 import gmail from "../images/gmail.png";
@@ -24,10 +24,6 @@ import SkillsGroup from '../components/SkillsGroup'
 import ExperienceCard from '../components/ExperienceCard';
 
 const Home = () => {
-
-    useEffect(() => {
-        alert("For Best Experience open on Desktop")
-    }, [])
 
     return (
         <main className="home" >
