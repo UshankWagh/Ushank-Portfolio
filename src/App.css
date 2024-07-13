@@ -14,8 +14,12 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.home {
+    overflow: hidden;
+}
+
 nav {
-    padding: 1rem 7rem;
+    padding: 1rem 6rem;
     position: fixed;
     background-color: black;
     color: white;
@@ -30,7 +34,7 @@ nav {
 }
 
 .nav-left {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 900;
     letter-spacing: 1px;
     color: blue;
@@ -50,12 +54,18 @@ nav {
 }
 
 .nav-right ul li {
+    position: relative;
     padding: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     text-shadow: 0 0 1rem blue;
     border-radius: 10px;
     cursor: pointer;
+    /* background: linear-gradient(50deg, rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0), transparent); */
+}
+
+.nav-right .burger {
+    display: none;
 }
 
 .nav-right ul li a {
@@ -66,19 +76,44 @@ nav {
 @media(max-width: 1000px) {
 
     nav {
-        padding: 2rem 3rem;
+        padding: 1rem 3rem 3rem;
+        transition: all 1s;
+        overflow: hidden;
+        /* flex-direction: column; */
     }
 
     .nav-left {
+        padding-top: 2rem;
+        padding-left: 7rem;
         font-size: 3rem;
     }
 
-    .nav-right ul li {
-        padding: 1rem;
-        font-size: 1.2rem;
+    .nav-right {
+        height: 3rem;
+        flex-basis: 47%;
+        transition: all 0.3s ease-out;
+    }
+
+    .nav-right .burger {
+        display: inline;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    nav:hover .nav-right {
+        height: 38rem;
     }
 
     .nav-right ul {
-        gap: 0;
+        display: block;
     }
+
+    .nav-right ul li {
+        padding: 1.5rem;
+        font-size: 2.1rem;
+        text-align: center;
+        transition: all 0.6s ease-out 3s;
+        opacity: 50%;
+    }
+
 }

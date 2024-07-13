@@ -1,14 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../styles/Home.css"
-import reactLogo from "../images/react.png"
-import express from "../images/express.jpg"
-import mongo from "../images/mongo.jpg"
-import node from "../images/node.jpg"
-import html from "../images/html.jpg"
-import css from "../images/css.jpg"
-import js from "../images/js.jpg"
-import c from "../images/c.jpg"
-import python from "../images/python.jpg"
 import linkedin from "../images/linkedin.png";
 import gmail from "../images/gmail.png";
 import call from "../images/call.png";
@@ -18,22 +9,32 @@ import promodor from "../images/promodor.png";
 import todoapp from "../images/todoapp.png";
 import quik_buy from "../images/quik_buy.jpg";
 import order_desk from "../images/order-desk.png";
-import iit_bombay from "../images/iit_bombay.jpg";
 import listening from "../images/listening.jpg";
 import sololearn from "../images/sololearn.jpg";
 import udemy from "../images/udemy.jpg";
+import udemy2 from "../images/udemy2.jpg";
 import profile from "../images/profile.png";
-import resume from "../images/resume.png";
+import solid from "../images/solid.png";
+import mr_loggage from "../images/mr_loggage.jpg";
+import navpad_info from "../images/navpad_info.jpg";
+import slms from "../images/slms.jpg";
+import resume_img from "../images/resume_img.png";
+import resumePDF from "../assets/resume.pdf"
+import SkillsGroup from '../components/SkillsGroup'
+import ExperienceCard from '../components/ExperienceCard';
 
 const Home = () => {
 
+    useEffect(() => {
+        alert("For Best Experience open on Desktop")
+    }, [])
 
     return (
         <main className="home" >
             <header className="page" id='home'>
                 <div className="resume" id='resume' onClick={() => { document.getElementById("resume").style.left = "200%" }} >
-                    <img src={resume} alt="" />
-                    <button><a href={resume} download="Ushank_Wagh_Resume">Download</a></button>
+                    <img src={resume_img} alt="" />
+                    <button><a href={resumePDF} download="Ushank_Wagh_Resume">Download PDF</a></button>
                     <button className="x" >X</button>
                 </div>
                 <div className="profile">
@@ -43,7 +44,7 @@ const Home = () => {
                 </div>
                 <div className="head">
                     <div className="intro">
-                        <p className='greet'>Hello !!,  Myself</p>
+                        <p className='greet'>Hello !!👋,  Myself</p>
                         <p className="name"><span>Ushank</span> Shailesh Wagh</p>
                     </div>
                     <p className="h">mern<span> Stack</span> Developer</p>
@@ -67,78 +68,18 @@ const Home = () => {
             <div className="skills" id='skills' >
                 <p className="skills-h page-h">Skills</p>
                 <div className="skills-c">
-                    <div className="skills-grp">
-                        <p className="grp-h">Frontend</p>
-                        <div className="skills-lst">
-                            <div className="sk">
-                                <img src={reactLogo} alt="" />
-                                <span>React JS</span>
-                            </div>
-                            <div className="sk">
-                                <img src={html} alt="" />
-                                <span>HTML 5</span>
-                            </div>
-                            <div className="sk">
-                                <img src={css} alt="" />
-                                <span>CSS 3</span>
-                            </div>
-                            <div className="sk">
-                                <img src={js} alt="" />
-                                <span>JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="skills-grp">
-                        <p className="grp-h">Backend</p>
-                        <div className="skills-lst">
-                            <div className="sk">
-                                <img src={node} alt="" />
-                                <span>Node Js</span>
-                            </div>
-                            <div className="sk">
-                                <img src={express} alt="" />
-                                <span>Express Js</span>
-                            </div>
-                            <div className="sk">
-                                <img src={mongo} alt="" />
-                                <span>Mongo DB</span>
-                            </div>
-                            <div className="sk">
-                                <img src={js} alt="" />
-                                <span>JavaScript</span>
-                            </div>
-                            <div className="sk">
-                                <img src={c} alt="" />
-                                <span>C</span>
-                            </div>
-                            <div className="sk">
-                                <img src={python} alt="" />
-                                <span>Python</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="skills-grp">
-                        <p className="grp-h">Other</p>
-                        <div className="skills-lst">
-                            <div className="sk">
-                                <img src={reactLogo} alt="" />
-                                <span>Problem Solving</span>
-                            </div>
-                            <div className="sk">
-                                <img src={reactLogo} alt="" />
-                                <span>Critical Thinking</span>
-                            </div>
-                            <div className="sk">
-                                <img src={reactLogo} alt="" />
-                                <span>Creativity</span>
-                            </div>
-                            <div className="sk">
-                                <img src={reactLogo} alt="" />
-                                <span>Communication</span>
-                            </div>
+                    <SkillsGroup groupHead="Frontend" skills={[["reactLogo", "React JS"], ["html", "HTML 5"], ["css", "CSS 3"], ["js", "JavaScript"], ["tailwind", "Tailwind CSS"]]} />
+                    <SkillsGroup groupHead="Backend" skills={[["nodeLogo", "Node JS"], ["express", "Express Js"], ["mongo", "Mongo DB"], ["js", "JavaScript"], ["reactLogo", "RestFull APIs"], ["reactLogo", "User Authentication"], ["c", "C"], ["python", "Python"]]} />
+                    <SkillsGroup groupHead="Other" skills={[["skillsLogo", "Problem Solving"], ["skillsLogo", "Critical Thinking"], ["skillsLogo", "Creativity"], ["skillsLogo", "Communication"],]} />
+                </div>
+            </div>
 
-                        </div>
-                    </div>
+            <div className="exp" id="exp">
+                <p className="exp-h page-h">Experience</p>
+                <div className="exp-c">
+                    <ExperienceCard role={"Full Stack Web Developer"} duration={["Jun '24", "Aug '24"]} company={{ img: mr_loggage, name: "Mr Loggage" }} skills={["MERN", "React Js", "Node Js", "Mongo DB", "Express Js", "Rest API"]} desc={["Working on a Real-World project on MERN Stack with collaboration in a dynamic team."]} />
+                    <ExperienceCard role={"Full Stack Developer"} duration={["Jan '24", "May '24"]} company={{ img: navpad_info, name: "Navpad infotech" }} skills={["MERN", "Rest API", "MVC", "Authentication"]} desc={["Developed a Full Stack project using MERN Stack Technology, while applying latest tech skills."]} />
+                    {/* <ExperienceCard role={""} duration={""} company={{img:"", name:""}} skills={[]} desc={[""]} /> */}
                 </div>
             </div>
 
@@ -148,17 +89,17 @@ const Home = () => {
                     <div className="proj1 proj">
                         <div className="proj-h">
                             <div className="pno">01</div>
-                            <div className="pname">Quik-Buy</div>
+                            <div className="pname">SLMS</div>
                         </div>
                         <div className="proj-dets">
-                            <img src={quik_buy} alt="" width="250rem" />
+                            <img src={slms} alt="" width="250rem" />
                             <div className="proj-desc">
                                 <p className="tech" ><b>Technology  : MERN</b></p>
                                 <p className="tech-d" >
-                                    A MERN-powered solution for effortless online shopping, connecting customers with local shops for home delivery.
+                                    Student Leave Management System: Online Leave Management platform to manage students leave
                                 </p>
                                 <div className="v-links">
-                                    <a href="https://github.com/VishankWagh/Online-Local-Store.git" target='_blank'><span>Github</span> <span className="material-symbols-outlined">
+                                    <a href="https://github.com/VishankWagh/SLMS" target='_blank'><span>Github</span> <span className="material-symbols-outlined">
                                         link
                                     </span></a>
                                 </div>
@@ -168,6 +109,26 @@ const Home = () => {
                     <div className="proj2 proj">
                         <div className="proj-h">
                             <div className="pno">02</div>
+                            <div className="pname">Quik-Buy</div>
+                        </div>
+                        <div className="proj-dets">
+                            <img src={quik_buy} alt="" width="250rem" />
+                            <div className="proj-desc">
+                                <p className="tech" ><b>Technology  : MERN</b></p>
+                                <p className="tech-d" >
+                                    A MERN-powered solution for effortless Local Store shopping, connecting customers with local shops with home delivery.
+                                </p>
+                                <div className="v-links">
+                                    <a href="https://github.com/VishankWagh/Quik-Buy" target='_blank'><span>Github</span> <span className="material-symbols-outlined">
+                                        link
+                                    </span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="proj3 proj">
+                        <div className="proj-h">
+                            <div className="pno">03</div>
                             <div className="pname">Order Desk</div>
                         </div>
                         <div className="proj-dets">
@@ -175,14 +136,14 @@ const Home = () => {
                             <div className="proj-desc">
                                 <p className="tech" ><b>Technology : MERN</b></p>
                                 <p className="tech-d" >
-                                    Your productivity companion built with React, making work-break scheduling a breeze to boost your efficiency.
+                                    React powered online platform for ordering food in restaurent in just one click, and get it served to your table.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div className="proj2 proj">
+                    <div className="proj4 proj">
                         <div className="proj-h">
-                            <div className="pno">03</div>
+                            <div className="pno">04</div>
                             <div className="pname">Promodor App</div>
                         </div>
                         <div className="proj-dets">
@@ -195,9 +156,9 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="proj3 proj">
+                    <div className="proj5 proj">
                         <div className="proj-h">
-                            <div className="pno">04</div>
+                            <div className="pno">05</div>
                             <div className="pname">Drone Website</div>
                         </div>
                         <div className="proj-dets">
@@ -208,16 +169,16 @@ const Home = () => {
                                     Explore the world of drones through our classic portfolio website, showcasing the cutting-edge features of our company's drone technology.
                                 </p>
                                 <div className="v-links">
-                                    <a href="https://usw-drone-technology.w3spaces.com" target='_blank'><span>View</span> <span className="material-symbols-outlined">
-                                        link
+                                    <a href="https://usw-drone-technology.w3spaces.com/" target='_blank'><span>View</span> <span className="material-symbols-outlined">
+                                        open_in_new
                                     </span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="proj4 proj">
+                    <div className="proj6 proj">
                         <div className="proj-h">
-                            <div className="pno">05</div>
+                            <div className="pno">06</div>
                             <div className="pname">Future Tech Clone</div>
                         </div>
                         <div className="proj-dets">
@@ -230,21 +191,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="proj5 proj">
-                        <div className="proj-h">
-                            <div className="pno">06</div>
-                            <div className="pname">Todo App</div>
-                        </div>
-                        <div className="proj-dets">
-                            <img src={todoapp} alt="" width="250rem" />
-                            <div className="proj-desc">
-                                <p className="tech" ><b>Technology : React Js</b></p>
-                                <p className="tech-d" >
-                                    Your dynamic task manager, powered by React, to organize your to-do lists effortlessly.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -252,17 +198,31 @@ const Home = () => {
                 <p className="page-h certifs-h">Certifications</p>
                 <div className="certifs-c">
                     <div className="certif">
-                        <img src={udemy} alt="" className="certif-img" />
+                        <img src={udemy2} alt="" className="certif-img" />
 
                         <p>
-                            Web Development Bootcamp 2023
+                            Web Development Bootcamp 2023 - Udemy
                         </p>
                     </div>
                     <div className="certif">
-                        <img src={iit_bombay} alt="" className="certif-img" />
+                        <img src={udemy} alt="" className="certif-img" />
 
                         <p>
-                            Certificate of Completion of C training
+                            The Complete 2023 Web Development Bootcamp - Udemy
+                        </p>
+                    </div>
+                    <div className="certif">
+                        <img src={solid} alt="" className="certif-img" />
+
+                        <p>
+                            SOLID Principles every developer must know - Scaler
+                        </p>
+                    </div>
+                    <div className="certif">
+                        <img src={sololearn} alt="" className="certif-img" />
+
+                        <p>
+                            Web Development Fundamentals - Sololearn
                         </p>
                     </div>
                     <div className="certif">
@@ -270,13 +230,6 @@ const Home = () => {
 
                         <p>
                             FunFest 2022-23
-                        </p>
-                    </div>
-                    <div className="certif">
-                        <img src={sololearn} alt="" className="certif-img" />
-
-                        <p>
-                            Web Development Fundamentals
                         </p>
                     </div>
                 </div>

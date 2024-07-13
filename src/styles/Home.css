@@ -1,24 +1,24 @@
 header {
-    padding: 6rem 5rem 3rem;
+    padding: 7rem 5rem 3rem;
     padding-top: 7rem;
     position: relative;
     display: flex;
     gap: 1rem;
     width: 100%;
     height: 100vh;
-    border-bottom: 1px solid blue;
+    /* border-bottom: 1px solid blue; */
 }
 
 header::after {
     content: "";
     position: absolute;
     top: 40%;
-    left: 70%;
-    width: 6rem;
-    height: 6rem;
+    left: 74%;
+    width: 9rem;
+    height: 9rem;
     border-radius: 50%;
     background-color: rgba(0, 0, 255, 0.30);
-    box-shadow: 0 0 10rem 10rem rgba(0, 0, 255, 0.30);
+    box-shadow: 0 0 9rem 9rem rgba(0, 0, 255, 0.30);
     z-index: -1;
 }
 
@@ -27,18 +27,17 @@ header::before {
     position: absolute;
     top: 70%;
     left: 35%;
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     background-color: rgba(0, 0, 255, 0.21);
-    box-shadow: 0 0 5rem 5rem rgba(0, 0, 255, 0.21);
+    box-shadow: 0 0 6rem 6rem rgba(0, 0, 255, 0.21);
     z-index: -1;
 }
 
 .home header .profile {
     padding-top: 4rem;
     flex-basis: 43%;
-    height: 100%;
 }
 
 .home header .profile img {
@@ -47,6 +46,7 @@ header::before {
     object-fit: cover;
     transition: all 0.5s;
     z-index: 2;
+    filter: contrast(110%);
 }
 
 .image-nav {
@@ -61,9 +61,9 @@ header::before {
     position: absolute;
     top: 9rem;
     left: 10rem;
-    width: 27rem;
+    width: 24rem;
     height: 27rem;
-    background: linear-gradient(160deg, blue, rgba(0, 0, 255, 0.497), rgba(0, 0, 255, 0.136), transparent);
+    background: linear-gradient(160deg, blue, rgba(0, 0, 255, 0.459), rgba(0, 0, 255, 0.045), transparent);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     z-index: 1;
 }
@@ -76,8 +76,8 @@ header::before {
 }
 
 .head .intro .greet {
-    margin-bottom: 0.6vmax;
-    font-size: 1.1vmax;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
     font-weight: 800;
     letter-spacing: 2px;
     font-style: italic;
@@ -85,7 +85,7 @@ header::before {
 }
 
 .head .intro .name {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     line-height: 2rem;
     font-size: 2vmax;
     letter-spacing: 1px;
@@ -97,7 +97,7 @@ header::before {
 }
 
 .home .head .h {
-    font-size: 6.2rem;
+    font-size: 5rem;
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
@@ -144,10 +144,10 @@ header::before {
 
 .resume {
     padding: 2rem;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 200%;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.651);
     z-index: 1000;
@@ -164,8 +164,13 @@ header::before {
     text-decoration: none;
 }
 
-.resume img {
+.resume-pdf {
+    width: 60%;
     height: 100%;
+}
+
+.resume img {
+    height: 150vh;
 }
 
 .resume button {
@@ -197,11 +202,12 @@ header::before {
 
 @media(max-width: 1000px) {
     header {
+        padding-top: 12rem;
         flex-direction: column;
     }
 
     .home header .profile {
-        padding-top: 7rem;
+        padding-top: 11rem;
     }
 
     .home header .profile img {
@@ -218,13 +224,18 @@ header::before {
         padding-left: 5rem;
     }
 
+    .head .intro .greet {
+        margin-bottom: 0.8rem;
+        font-size: 1.5rem;
+    }
+
     .home .head .h {
-        margin-top: 18rem;
+        margin-top: 10rem;
         font-size: 7rem;
     }
 
     .profile::before {
-        top: 11rem;
+        top: 18rem;
         left: 13rem;
         width: 35rem;
         height: 35rem;
@@ -232,6 +243,10 @@ header::before {
 
     .resume {
         height: 60vh;
+    }
+
+    .resume .x {
+        right: 6%;
     }
 }
 
@@ -262,7 +277,7 @@ header::before {
 .about {
     padding: 3rem 10rem 5rem;
     /* height: 4vmax; */
-    border-bottom: 1px solid blue;
+    /* border-bottom: 1px solid blue; */
 }
 
 .about-c p {
@@ -278,8 +293,8 @@ header::before {
 /* skills */
 
 .skills {
-    padding: 3rem 10rem 10rem;
-    border-bottom: 1px solid blue;
+    padding: 3rem 7rem;
+    /* border-bottom: 1px solid blue; */
     position: relative;
 }
 
@@ -314,7 +329,6 @@ header::before {
     width: 50%;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 2rem;
 }
 
@@ -326,7 +340,7 @@ header::before {
     flex-basis: 5%;
     color: transparent;
     height: 4rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: 2px;
     color: blue;
@@ -345,8 +359,8 @@ header::before {
 }
 
 .sk {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 1px;
     display: flex;
@@ -358,6 +372,209 @@ header::before {
     width: 2rem;
     mix-blend-mode: difference;
 }
+
+
+/* Experience */
+
+.exp {
+    padding: 3rem 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.exp-c {
+    padding-top: 5%;
+    position: relative;
+}
+
+.exp-c::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 3.2rem;
+    height: 60%;
+    width: 3px;
+    background-color: blue;
+}
+
+.exp-card {
+    position: relative;
+    padding: 3rem 5rem;
+    margin: auto;
+    margin-bottom: 4.5rem;
+    width: 65%;
+    border-radius: 3rem;
+    background: linear-gradient(rgba(0, 0, 255, 0.416), rgba(0, 0, 255, 0.066));
+}
+
+.date {
+    position: absolute;
+    top: 5.3rem;
+    left: -20.3rem;
+    /*18*/
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.exp-card::before {
+    content: '';
+    position: absolute;
+    top: 5rem;
+    left: -8.8rem;
+    /*6*/
+    height: 2rem;
+    width: 2rem;
+    border: 3px solid blue;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: 0 0 1.4rem 0.3rem rgba(0, 0, 255, 0.823);
+    z-index: 3;
+    /* background-color: rgba(0, 0, 255, 0.173); */
+}
+
+.exp-card::after {
+    content: '';
+    position: absolute;
+    top: 6rem;
+    left: -16%;
+    /*13*/
+    height: 3px;
+    width: 6.4rem;
+    /*3.9*/
+    background-color: blue;
+}
+
+.role {
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.role p {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 900;
+    border-bottom: 3px solid #000081;
+}
+
+.exp-company {
+    margin-bottom: 3rem;
+}
+
+.exp-company a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.exp-company img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.exp-company p {
+    margin-left: 1rem;
+    color: rgba(0, 145, 255, 0.55);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.exp-desc {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    color: white;
+    /* letter-spacing: 1px;
+    line-height: 24px; */
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+}
+
+.exp-skills {
+    /* margin-bottom: 2rem 0 1rem; */
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem 1.2rem;
+    flex-wrap: wrap;
+}
+
+.exp-skill {
+    padding: 9px 21px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 10rem;
+    background-color: black;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 255, 0.30);
+}
+
+
+@media(max-width: 1000px) {
+
+    .exp-card {
+        margin-bottom: 8.5rem;
+        width: 74%;
+    }
+
+    .exp-c {
+        padding-top: 10%;
+    }
+
+    .exp-c::before {
+        left: 1.2rem;
+    }
+
+    .date {
+        top: 0;
+        left: 0;
+        position: relative;
+        font-size: 1.2rem;
+    }
+
+    .exp-card::before {
+        left: -6rem;
+    }
+
+    .exp-card::after {
+        left: -13%;
+        width: 4.6rem;
+    }
+
+    .role {
+        display: block;
+        margin-bottom: 1.2rem;
+    }
+
+    .role p {
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .exp-company p {
+        font-size: 25px;
+    }
+
+    .exp-desc {
+        font-size: 1.3rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        line-height: 2.2rem;
+    }
+
+    .exp-skill {
+        padding: 12px 28px;
+        font-size: 23px;
+    }
+}
+
 
 
 
@@ -420,6 +637,7 @@ header::before {
 .proj {
     position: relative;
     width: 45%;
+    height: 25rem;
     background: linear-gradient(transparent, rgba(0, 0, 255, 0.233));
     /* background-color: blueviolet; */
 }
@@ -442,7 +660,7 @@ header::before {
     content: "";
     position: absolute;
     top: 15%;
-    right: -7.5%;
+    right: -7%;
     height: 1rem;
     width: 2.5rem;
     background-color: rgba(0, 0, 255, 0.607);
@@ -452,16 +670,27 @@ header::before {
     padding: 1rem;
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .proj-h .pno {
+    position: relative;
     color: transparent;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 900;
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: rgba(0, 0, 255, 0.703);
 }
+
+/* .proj-h .pno::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 124%;
+    background-color: rgba(104, 104, 104, 0.49);
+    width: 3px;
+    height: 5.5rem;
+} */
 
 .proj-h .pname {
     font-size: 2.2rem;
@@ -478,8 +707,8 @@ header::before {
 
 .proj .proj-dets img {
     object-fit: contain;
-    height: 17rem;
-    width: 24rem;
+    height: 11rem;
+    width: 21rem;
 }
 
 .proj-desc {
@@ -490,6 +719,7 @@ header::before {
     width: 20rem;
     /* height: 60%; */
     color: rgb(212, 212, 212);
+    background-color: rgba(0, 0, 0, 0.444);
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 1px;
@@ -542,19 +772,29 @@ header::before {
     }
 
     .about-c p {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     .skills-c {
-        flex-direction: column;
+        flex-direction: row;
+    }
+
+    .skills-grp {
+        flex-wrap: wrap;
     }
 
     .skills-lst {
         transform: scaleX(100%);
     }
 
+    .sk {
+        margin-bottom: 28px;
+        font-size: 1.7rem;
+    }
+
     .projects::before {
-        display: none;
+        height: 77%;
+        left: 9rem;
     }
 
     .projects-c::before {
@@ -564,42 +804,59 @@ header::before {
 
     .proj {
         margin: 0 0 6rem;
-        width: 100%;
+        width: 84%;
         background: linear-gradient(transparent, rgba(0, 0, 255, 0.152));
+    }
+
+    .proj:nth-child(even) {
+        margin: 0 0 6rem;
     }
 
     .proj::before,
     .porj::after {
-        display: none;
+        content: "";
+        position: absolute;
+        top: 15%;
+        left: -15% !important;
+        height: 1rem;
+        width: 2.5rem;
+        background-color: rgba(0, 0, 255, 0.607);
     }
 
     .proj:nth-child(odd)::after {
         display: none;
     }
 
+
+
     .proj-desc {
         text-align: start;
     }
 
-    .proj-dets:hover .proj-desc {
-        left: 20%;
+    .proj:hover .proj-desc {
+        left: 100%;
         opacity: 100%;
     }
 
     .proj-desc {
         padding: 2rem 1rem 1rem;
         position: absolute;
-        top: 0;
-        left: 0%;
-        width: 26rem;
+        top: -50%;
+        /* left: 100%; */
+        width: 19rem;
         color: rgb(255, 255, 255);
         font-size: 1.5rem;
         font-weight: 500;
         letter-spacing: 3px;
         line-height: 2.2rem;
-        text-align: end;
+        text-align: start;
+        /* opacity: 0%; */
         background-color: rgba(0, 0, 0, 0.323);
         backdrop-filter: blur(20px);
+    }
+
+    .proj-desc .v-links a {
+        margin-left: 0;
     }
 }
 
@@ -696,11 +953,12 @@ header::before {
 }
 
 .certif p {
+    margin: auto;
     color: white;
     width: 85%;
     font-size: 1.1rem;
     letter-spacing: 1px;
-    line-height: 1.6rem;
+    line-height: 1.4rem;
     text-align: center;
     font-weight: 600;
 }
@@ -759,7 +1017,7 @@ header::before {
 }
 
 .contact-c .c p {
-    font-size: 1.2vmax;
+    font-size: 1.2rem;
     font-weight: 500;
     font-family: cursive;
     letter-spacing: 1px;
@@ -774,13 +1032,34 @@ header::before {
 
 @media(max-width: 1000px) {
 
+    .certifs-c {
+        gap: 4.7rem;
+    }
+
     .certifs-c::before {
         background-color: rgba(0, 0, 255, 0.19);
     }
 
+    .certif {
+        /* box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 255, 0.41); */
+        width: 21rem;
+    }
+
+    .certif p {
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+        /* height: 7rem; */
+    }
+
     .contact-c {
+        margin: 10rem 0;
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+    }
+
+    .contact-c .c p {
+        font-size: 1.8rem;
     }
 
     .contacts {
