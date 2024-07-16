@@ -60,7 +60,7 @@ header::before {
     content: '';
     position: absolute;
     top: 9rem;
-    left: 10rem;
+    left: 11rem;
     width: 24rem;
     height: 27rem;
     background: linear-gradient(160deg, blue, rgba(0, 0, 255, 0.459), rgba(0, 0, 255, 0.045), transparent);
@@ -737,6 +737,8 @@ header::before {
 }
 
 .proj-desc .tech {
+    padding: 8px 5px 8px 0;
+    background: linear-gradient(90deg, rgba(0, 0, 255, 0.015), rgba(0, 0, 255, 0.382));
     margin-bottom: 5%;
 }
 
@@ -751,21 +753,28 @@ header::before {
 
 .v-links {
     margin-top: 1.5rem;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
 }
 
 .v-links a {
-    margin-left: auto;
-    padding: 0.5rem 1rem;
-    width: 10vmax;
+    padding: 0.3rem 1rem;
+    width: fit-content;
     text-align: center;
     color: white;
+    border: 3px solid blue;
     border-radius: 50px;
     background-color: blue;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
     text-decoration: none;
+    transition: all 0.5s;
+}
+
+.v-links a:hover {
+    background-color: black;
 }
 
 @media(max-width: 1000px) {
@@ -857,6 +866,10 @@ header::before {
         /* opacity: 0%; */
         background-color: rgba(0, 0, 0, 0.323);
         backdrop-filter: blur(20px);
+    }
+
+    .proj-desc .v-links {
+        justify-content: start;
     }
 
     .proj-desc .v-links a {

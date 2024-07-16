@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../styles/Home.css"
 import linkedin from "../images/linkedin.png";
 import gmail from "../images/gmail.png";
@@ -9,6 +9,7 @@ import promodor from "../images/promodor.png";
 import todoapp from "../images/todoapp.png";
 import quik_buy from "../images/quik_buy.jpg";
 import order_desk from "../images/order-desk.png";
+import portfolio from "../images/portfolio.png";
 import listening from "../images/listening.jpg";
 import sololearn from "../images/sololearn.jpg";
 import udemy from "../images/udemy.jpg";
@@ -22,8 +23,16 @@ import resume_img from "../images/resume_img.png";
 import resumePDF from "../assets/resume.pdf"
 import SkillsGroup from '../components/SkillsGroup'
 import ExperienceCard from '../components/ExperienceCard';
+import axios from 'axios';
 
 const Home = () => {
+
+    useEffect(() => {
+        (async () => {
+            const response = await axios.get("https://slms-backend.vercel.app/get/visitor-count/portfolio-u");
+            console.log("Visitor Count:", response.data.visitCount);
+        })();
+    }, [])
 
     return (
         <main className="home" >
@@ -98,6 +107,9 @@ const Home = () => {
                                     <a href="https://github.com/VishankWagh/SLMS" target='_blank'><span>Github</span> <span className="material-symbols-outlined">
                                         link
                                     </span></a>
+                                    <a href="https://student-leave-management-system.netlify.app/" target='_blank'><span></span><span className="material-symbols-outlined">
+                                        open_in_new
+                                    </span></a>
                                 </div>
                             </div>
                         </div>
@@ -118,6 +130,9 @@ const Home = () => {
                                     <a href="https://github.com/VishankWagh/Quik-Buy" target='_blank'><span>Github</span> <span className="material-symbols-outlined">
                                         link
                                     </span></a>
+                                    <a href="https://quik-buy.vercel.app" target='_blank'><span></span><span className="material-symbols-outlined">
+                                        open_in_new
+                                    </span></a>
                                 </div>
                             </div>
                         </div>
@@ -125,6 +140,29 @@ const Home = () => {
                     <div className="proj3 proj">
                         <div className="proj-h">
                             <div className="pno">03</div>
+                            <div className="pname">Portfolio</div>
+                        </div>
+                        <div className="proj-dets">
+                            <img src={portfolio} alt="" width="250rem" />
+                            <div className="proj-desc">
+                                <p className="tech" ><b>Technology  : React Js</b></p>
+                                <p className="tech-d" >
+                                    Visit the Attractive and Modern design Portfolio, designed using latest tech React Js. Have a look on my latest projects and industry oriented tech stack skills.
+                                </p>
+                                <div className="v-links">
+                                    <a href="https://github.com/UshankWagh/Ushank-Portfolio" target='_blank'><span>Github</span> <span className="material-symbols-outlined">
+                                        link
+                                    </span></a>
+                                    <a href="https://ushank-wagh-portfolio.vercel.app" target='_blank'><span></span><span className="material-symbols-outlined">
+                                        open_in_new
+                                    </span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="proj4 proj">
+                        <div className="proj-h">
+                            <div className="pno">04</div>
                             <div className="pname">Order Desk</div>
                         </div>
                         <div className="proj-dets">
@@ -137,9 +175,9 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="proj4 proj">
+                    <div className="proj5 proj">
                         <div className="proj-h">
-                            <div className="pno">04</div>
+                            <div className="pno">05</div>
                             <div className="pname">Promodor App</div>
                         </div>
                         <div className="proj-dets">
@@ -152,9 +190,9 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="proj5 proj">
+                    <div className="proj6 proj">
                         <div className="proj-h">
-                            <div className="pno">05</div>
+                            <div className="pno">06</div>
                             <div className="pname">Drone Website</div>
                         </div>
                         <div className="proj-dets">
@@ -162,19 +200,19 @@ const Home = () => {
                             <div className="proj-desc">
                                 <p className="tech" ><b>Technology : HTML 5, CSS 3</b></p>
                                 <p className="tech-d" >
-                                    Explore the world of drones through our classic portfolio website, showcasing the cutting-edge features of our company's drone technology.
+                                    Explore classic UI design, showcasing the cutting-edge features of company's drone technology.
                                 </p>
                                 <div className="v-links">
-                                    <a href="https://usw-drone-technology.w3spaces.com/" target='_blank'><span>View</span> <span className="material-symbols-outlined">
+                                    <a href="https://usw-drone-technology.w3spaces.com/" target='_blank'><span></span><span className="material-symbols-outlined">
                                         open_in_new
                                     </span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="proj6 proj">
+                    <div className="proj7 proj">
                         <div className="proj-h">
-                            <div className="pno">06</div>
+                            <div className="pno">07</div>
                             <div className="pname">Future Tech Clone</div>
                         </div>
                         <div className="proj-dets">

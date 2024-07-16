@@ -28,7 +28,6 @@ const skillsImgs = {
 }
 
 const SkillsGroup = ({ groupHead, skills }) => {
-    console.log(skills);
     return (
         <div className="skills-grp">
             <p className="grp-h">{groupHead}</p>
