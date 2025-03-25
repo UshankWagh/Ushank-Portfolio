@@ -97,11 +97,11 @@ header::before {
 }
 
 .home .head .h {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
-    line-height: 6vmax;
+    line-height: 5vmax;
     text-align: left;
     text-transform: uppercase;
     /* text-decoration: solid underline blue 3px; */
@@ -109,9 +109,9 @@ header::before {
 
 .head .h span {
     letter-spacing: 7px;
-    color: transparent;
-    -webkit-text-stroke-width: 5px;
-    -webkit-text-stroke-color: blue;
+    color: blue;
+    /* -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: blue; */
 }
 
 .hire {
@@ -381,11 +381,38 @@ header::before {
 /* Experience */
 
 .exp {
+    position: relative;
     padding: 3rem 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.exp::after {
+    content: "";
+    position: absolute;
+    top: 37%;
+    left: 74%;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 255, 0.30);
+    box-shadow: 0 0 9rem 9rem rgba(0, 0, 255, 0.30);
+    z-index: -1;
+}
+
+.exp::before {
+    content: "";
+    position: absolute;
+    top: 66%;
+    left: 11%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 255, 0.21);
+    box-shadow: 0 0 6rem 6rem rgba(0, 0, 255, 0.21);
+    z-index: -1;
 }
 
 .exp-c {
@@ -398,7 +425,7 @@ header::before {
     position: absolute;
     top: 0;
     left: 3.2rem;
-    height: 60%;
+    height: 75%;
     width: 3px;
     background-color: blue;
 }
@@ -498,6 +525,10 @@ header::before {
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.8rem;
+}
+
+.exp-desc li {
+    max-width: 30rem;
 }
 
 .exp-skills {
@@ -718,7 +749,7 @@ header::before {
 .proj-desc {
     padding: 2rem 1rem 1rem;
     position: absolute;
-    top: 1rem;
+    top: -2rem;
     left: 0%;
     width: 20rem;
     /* height: 60%; */
